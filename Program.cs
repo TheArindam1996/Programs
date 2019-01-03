@@ -3,46 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
-namespace ConsoleApp1
+namespace Demo2_mile2
 {
-    class Employee
+    class Program
     {
-        string EmployeeName;
-        int EmployeeId;
-        double Salary;
-        public string EmpName
+        static string add(string input1,string input2)
         {
-            set
-            {
-                EmployeeName = value;
-            }
-            get
-            {
-                return EmployeeName;
-            }
+            BigInteger sum = BigInteger.Parse(input1) + BigInteger.Parse(input2);            
+            return sum.ToString();
         }
-        public int EMPId
+        static void Main(string[] args)
         {
-            set
-            {
-                EmployeeId = value;
-            }
-            get
-            {
-                return EmployeeId;
-            }
-        } 
-        public double EmpSalary
-        {
-            set
-            {
-                Salary = value;
-            }
-            get
-            {
-                return Salary;
-            }
+            string result=add(Console.ReadLine(),Console.ReadLine());
+            Console.WriteLine(result);
         }
     }
 }
